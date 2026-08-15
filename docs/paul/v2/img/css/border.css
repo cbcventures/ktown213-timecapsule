@@ -1,0 +1,10 @@
+.border {
+	border: 1px solid #000000;
+	background-color: #FFFFFF;
+}
+.title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #000000;
+}

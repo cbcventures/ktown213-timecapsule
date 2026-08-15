@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /squirrelmail/
+Disallow: /paul/
+Allow: /
+
+Sitemap: https://ktown213.com/sitemap.xml
