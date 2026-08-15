@@ -1,0 +1,201 @@
+
+<!------------------------------------------------------------- 루프 시작 ------------------------->
+
+<body leftmargin="0" topmargin="0">
+<script src="/timecapsule-banner.js"></script>
+<script src="/broken-image-placeholder.js"></script>
+
+<TABLE cellSpacing="0" cellPadding="0" width="200" border="0">
+ <TR>
+  <TD align="center" height="70">
+   <SPAN id="XFrame1" SPANCOLOR="C0C0C0">
+    <SubContent>
+<SCRIPT language="JavaScript">
+<!--
+var scrollerwidth1=200 // 스크롤러의 가로 
+var scrollerheight1=189   // 스크롤러의 세로 
+var scrollerbgcolor=''  // 스크롤러 배경색 
+var scrollerbackground=''  // 스크롤러 배경이미지 
+
+// 롤링 갯수 
+var num = 4
+var index=0 
+         
+// Scrolling 속도         
+var scrollspeed1='5000'   
+// 멈추는 시간 
+var waitingtime1='2'                   
+var image1=new Array() 
+if (image1.length>1)   
+j1=2   
+else   
+j1=0   
+
+function move11(wlayer1){   
+t_layer1=eval(wlayer1)   
+if (t_layer1.top>0&&t_layer1.top<=num){   
+t_layer1.top=0   
+setTimeout("move11(t_layer1)",scrollspeed1)   
+setTimeout("move12(document.main.document.second)",scrollspeed1)   
+return   
+}   
+if (t_layer1.top>=t_layer1.document.height*-1){   
+t_layer1.top-=num 
+setTimeout("move11(t_layer1)",waitingtime1)   
+}else{   
+t_layer1.top=scrollerheight1   
+t_layer1.document.write(image1[j1])   
+t_layer1.document.close()   
+if (j1==image1.length-1)   
+j1=0   
+else   
+j1++   
+}   
+}   
+           
+function move12(wlayer1){   
+tlayer2=eval(wlayer1)   
+if (tlayer2.top>0&&tlayer2.top<=num){   
+tlayer2.top=0   
+setTimeout("move12(tlayer2)",scrollspeed1)   
+setTimeout("move11(document.main.document.first)",scrollspeed1)   
+return   
+}   
+if (tlayer2.top>=tlayer2.document.height*-1){   
+tlayer2.top-=num 
+setTimeout("move12(tlayer2)",waitingtime1)   
+}else{   
+tlayer2.top=scrollerheight1   
+tlayer2.document.write(image1[j1])   
+tlayer2.document.close()   
+if (j1==image1.length-1)   
+j1=0   
+else   
+j1++   
+}   
+}   
+           
+function move13(whichdiv1){   
+tdiv1=eval(whichdiv1)   
+if (tdiv1.style.pixelTop>0&&tdiv1.style.pixelTop<=num){   
+tdiv1.style.pixelTop=0   
+setTimeout("move13(tdiv1)",scrollspeed1)   
+setTimeout("move14(second21)",scrollspeed1)   
+return   
+}   
+if (tdiv1.style.pixelTop>=tdiv1.offsetHeight*-1){   
+tdiv1.style.pixelTop-=num 
+setTimeout("move13(tdiv1)",waitingtime1)   
+}else{   
+tdiv1.style.pixelTop=scrollerheight1   
+tdiv1.innerHTML=image1[j1]   
+if (j1==image1.length-1)   
+j1=0   
+else   
+j1++   
+}   
+}   
+           
+function move14(whichdiv1){   
+tdiv21=eval(whichdiv1)   
+if (tdiv21.style.pixelTop>0&&tdiv21.style.pixelTop<=num){   
+tdiv21.style.pixelTop=0   
+setTimeout("move14(tdiv21)",scrollspeed1)   
+setTimeout("move13(first21)",scrollspeed1)   
+return   
+}   
+if (tdiv21.style.pixelTop>=tdiv21.offsetHeight*-1){   
+tdiv21.style.pixelTop-=num   
+setTimeout("move14(second21)",waitingtime1)   
+                         
+                     
+if(j1==index) { 
+index= 200; 
+j1=2; 
+} 
+                                    
+}else{
+tdiv21.style.pixelTop=scrollerheight1   
+tdiv21.innerHTML=image1[j1]   
+if (j1==image1.length-1)   
+j1=0   
+else   
+j1++   
+}   
+}   
+           
+function startscroll1(){   
+if (document.all){   
+move13(first21)   
+second21.style.top=scrollerheight1   
+second21.style.visibility='visible'   
+}else if (document.layers){   
+document.main.visibility='show'   
+move11(document.main.document.first)   
+document.main.document.second.top=scrollerheight1+num   
+document.main.document.second.visibility='show'   
+}   
+}   
+           
+//window.onload=startscroll   
+
+var image1=new Array(); 
+                 
+// 스크롤러에 들어갈 내용들을 태그와 함께 넣어 줍니다 
+
+image1[0]='';
+image1[1]='';
+image1[2]='';
+image1[3]='';        
+--->
+   </SCRIPT>
+
+<TABLE cellSpacing="0" cellPadding="0" width="198" border="0" height="80">
+ <TR>
+  <TD align="center" height="70">
+
+<SCRIPT>
+image1[0]='<iframe src="scroll1.htm" marginwidth="0" frameborder="0" height="189" width="200" align="left" scrolling="no"></iframe>';
+image1[1]='<iframe src="scroll2.htm" marginwidth="0" frameborder="0" height="189" width="200" align="center" scrolling="no"></iframe>';
+image1[2]='<iframe src="scroll3.htm" marginwidth="0" frameborder="0" height="189" width="200" align="center" scrolling="no"></iframe>';
+image1[3]='<iframe src="scroll4.htm" marginwidth="0" frameborder="0" height="189" width="200" align="center" scrolling="no"></iframe>';
+</SCRIPT>
+
+<SPAN style="WIDTH: 200px; POSITION: relative; HEIGHT: 189px" id="main21">
+  <DIV style="LEFT: 0px; WIDTH: 200px; CLIP: rect(0px 200px 189px 0px); POSITION: absolute; LEFT: 0px; WIDTH: 198px" id="scroll_image">
+  <DIV style="LEFT: 0px; WIDTH: 200px; POSITION: absolute; TOP: 1px" id="first21">
+
+<SCRIPT>
+document.write(image1[0]); 
+</SCRIPT>
+  </DIV>
+
+  <DIV style="LEFT: 0px; VISIBILITY: hidden; WIDTH: 200px; POSITION: absolute; TOP: 0px" id="second21">
+<SCRIPT>
+  document.write(image1[1]); 
+</SCRIPT>
+  </DIV>
+
+  <DIV style="LEFT: 0px; VISIBILITY: hidden; WIDTH: 200px; POSITION: absolute; TOP: 0px" id="thrid21">
+<SCRIPT>
+  document.write(image1[2]); 
+</SCRIPT>
+  </DIV>
+
+  </DIV>
+</SPAN>
+
+</TD>
+</TR>
+</TABLE>
+
+<SCRIPT>
+startscroll1();
+   </SCRIPT>
+
+</SubContent>
+</SPAN>
+</td>
+</tr>
+</table>
+<!------------------------------------------------------- 루프 끝 -------------------------------->
